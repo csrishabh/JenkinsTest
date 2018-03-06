@@ -11,7 +11,7 @@ public class TestController {
 	@RequestMapping(value="/test" ,method = RequestMethod.GET)
 	public String test(){
 		
-		return "Jenkins Test Successful";
+		return "Jenkins Test Successful ";
 	}
 
 }
