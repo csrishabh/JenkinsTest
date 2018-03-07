@@ -1,9 +1,8 @@
-node {
-
-		def gradle(command) {
+def gradle(command) {
 		bat "./gradlew ${command}"
-		}
-    
+}
+
+node {   
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
         echo 'Cloning branch..'
