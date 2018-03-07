@@ -28,4 +28,3 @@ node {
 		 echo 'Deploy Jar file..'
         }
     }
-}
