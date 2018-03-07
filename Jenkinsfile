@@ -1,4 +1,8 @@
 node {
+
+		def gradle(command) {
+		bat "./gradlew ${command}"
+		}
     
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
@@ -10,7 +14,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 		echo 'Build Jar file..'
-        bat 'gradle build --info'
+        gradle build
     }
 
     stage('Test image') {
