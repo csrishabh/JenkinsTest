@@ -13,7 +13,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 		echo 'Build Jar file..'
-        gradle build
+        gradle 'build'
     }
 
     stage('Test image') {
