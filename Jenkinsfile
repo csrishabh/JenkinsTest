@@ -2,7 +2,9 @@ def gradle(command) {
 		bat "./gradlew ${command}"
 }
 
-node {   
+node {  
+    def app 
+	
     stage('Clone repository') {
         /* Let's make sure we have the repository cloned to our workspace */
         echo 'Cloning branch..'
@@ -14,6 +16,13 @@ node {
          * docker build on the command line */
 		echo 'Build Jar file..'
         gradle 'build'
+    }
+	
+	stage('Build image') {
+        /* This builds the actual image; synonymous to
+         * docker build on the command line */
+
+        app = docker.build("csrishabh/PipelineTest")
     }
 
     stage('Test image') {
@@ -29,6 +38,5 @@ node {
          * Second, the 'latest' tag.
          * Pushing multiple tags is cheap, as all the layers are reused. */
 		 echo 'Deploy Jar file..'
-		 bat "java -jar build\libs\PipeLineTest-0.0.1-SNAPSHOT.jar"
         }
     }
