@@ -22,7 +22,7 @@ node {
         /* This builds the actual image; synonymous to
          * docker build on the command line */
 
-        app = bat 'docker build -t csrishabh/pipelinetest'
+        app = bat 'docker build -t csrishabh/pipelinetest ./'
     }
 
     stage('Test image') {
