@@ -41,6 +41,7 @@ node {
             app.push("${env.BUILD_NUMBER}")
             app.push("latest")
         }
+		}
 
     stage('Deploy Jar') {
         /* Finally, we'll push the image with two tags:
