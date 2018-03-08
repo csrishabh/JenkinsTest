@@ -29,6 +29,6 @@ node {
          * Second, the 'latest' tag.
          * Pushing multiple tags is cheap, as all the layers are reused. */
 		 echo 'Deploy Jar file..'
-		 bat "java -jar \build\libs\PipeLineTest-0.0.1-SNAPSHOT.jar"
+		 bat "java -jar build\libs\PipeLineTest-0.0.1-SNAPSHOT.jar"
         }
     }
