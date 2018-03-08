@@ -6,7 +6,7 @@ FROM java:8
 EXPOSE 8081
 
 
-ADD build\libs\PipeLineTest-0.0.1-SNAPSHOT.jar app.jar
+ADD build/libs/PipeLineTest-0.0.1-SNAPSHOT.jar app.jar
 
 
 #RUN bash -c 'touch /app.jar'
